@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Ahganirya';
+    src: url("../ASSETS/FONTS/Ahganirya.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Moguine';
+    src: url("../ASSETS/FONTS/Moguine.woff2") format("woff2");
+}
+
+$main-color : #E5EDEF;
+$grey : #B7C3C5;
+$dark : #1E2426;
+$title-font : 'Moguine';
+$main-font : 'Ahganirya';
+
+
+body {
+    height: auto;
+    width: 100vw;
+    background-color: $main-color;
+    overflow-x: hidden;
+    main {
+        color : $dark-grey;
+        font-family : $main-font;
+
+        .title {
+            font-family : $title-font;
+            font-size : 10vw;
+            color : $dark;
+        }
+    }
+}

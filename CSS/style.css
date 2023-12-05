@@ -1,1 +1,23 @@
-/*# sourceMappingURL=style.css.map */
+@font-face {
+  font-family: "Ahganirya";
+  src: url("../ASSETS/FONTS/Ahganirya.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Moguine";
+  src: url("../ASSETS/FONTS/Moguine.woff2") format("woff2");
+}
+body {
+  height: auto;
+  width: 100vw;
+  background-color: #E5EDEF;
+  overflow-x: hidden;
+}
+body main {
+  color: #A6A2A2;
+  font-family: "Ahganirya";
+}
+body main .title {
+  font-family: "Moguine";
+  font-size: 10vw;
+  color: #1E2426;
+}/*# sourceMappingURL=style.css.map */
