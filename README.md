@@ -1,5 +1,3 @@
-# ASSETS
+# PortFolio 2.0
 
-A public cloud storage repository for my fonts and future assets.
-
-**DISCLAIMER :** These fonts are for personal use only !
+Made using Figma as an inspiration / design tool and with SCSS / HTML / JS.
