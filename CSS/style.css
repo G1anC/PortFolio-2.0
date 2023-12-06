@@ -58,7 +58,7 @@ body nav .link {
 body nav .link a {
   text-decoration: none;
   color: white;
-  transition: 0.5s;
+  transition: all 0.1s;
 }
 body nav .link a:hover {
   color: #56FF90;
@@ -72,8 +72,8 @@ body .centered-losange--wrapper {
   align-items: center;
 }
 body .centered-losange--wrapper .centered-losange {
-  height: 350px;
-  width: 350px;
+  height: 30vw;
+  width: 30vw;
   position: absolute;
   background: linear-gradient(to right, rgba(189, 243, 255, 0.13), transparent);
   transform: rotate(45deg);
@@ -89,19 +89,25 @@ body .corners > * {
 }
 body .corners .horizontal-bar {
   height: 1px;
-  width: 350px;
-  top: 28px;
-  left: 45px;
+  width: 30vw;
+  top: 29px;
+  left: 47px;
+}
+body .corners .mini-horizontal-bar {
+  height: 1px;
+  width: 10vw;
+  top: 10px;
+  left: 40px;
 }
 body .corners .vertical-bar {
-  height: 100px;
+  height: 7.5vh;
   width: 1px;
-  top: 20px;
-  left: 28px;
+  top: 19px;
+  left: 29px;
 }
 body .corners .losange {
   background-color: transparent;
-  border: 1px solid white;
+  border: 2px solid white;
   height: 25px;
   width: 25px;
   top: 15px;

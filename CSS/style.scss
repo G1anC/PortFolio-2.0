@@ -56,7 +56,7 @@ body {
             a {
                 text-decoration: none;
                 color: white;
-                transition: 0.5s;
+                transition: all 0.1s;
                 &:hover { color: $details-color; }
             }
         }
@@ -70,8 +70,8 @@ body {
         justify-content: center;
         align-items: center;
         .centered-losange {
-            height: 350px;
-            width: 350px;
+            height: 30vw;
+            width: 30vw;
             position: absolute;
             background: $rectangle-background;
             transform: rotate(45deg);
@@ -88,19 +88,25 @@ body {
         }
         .horizontal-bar {
             height: 1px;
-            width: 350px;
-            top: 28px;
-            left: 45px;
+            width: 30vw;
+            top: 29px;
+            left: 47px;
+        }
+        .mini-horizontal-bar {
+            height: 1px;
+            width: 10vw;
+            top: 10px;
+            left: 40px;
         }
         .vertical-bar {
-            height: 100px;
+            height: 7.5vh;
             width: 1px;
-            top: 20px;
-            left: 28px;
+            top: 19px;
+            left: 29px;
         }
         .losange {
             background-color: transparent;
-            border: 1px solid white;
+            border: 2px solid white;
             height: 25px;
             width: 25px;
             top: 15px;
