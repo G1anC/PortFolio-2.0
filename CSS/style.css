@@ -77,4 +77,34 @@ body .centered-losange--wrapper .centered-losange {
   position: absolute;
   background: linear-gradient(to right, rgba(189, 243, 255, 0.13), transparent);
   transform: rotate(45deg);
+}
+body .corners {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+body .corners > * {
+  position: relative;
+  background-color: white;
+}
+body .corners .horizontal-bar {
+  height: 1px;
+  width: 350px;
+  top: 37px;
+  left: 57px;
+}
+body .corners .vertical-bar {
+  height: 100px;
+  width: 1px;
+  top: 26px;
+  left: 35px;
+}
+body .corners .losange {
+  background-color: transparent;
+  border: 1px solid white;
+  height: 30px;
+  width: 30px;
+  top: 20px;
+  transform: rotate(45deg);
+  left: 20px;
 }/*# sourceMappingURL=style.css.map */
