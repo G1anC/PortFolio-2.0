@@ -1,122 +1,179 @@
 @font-face { font-family: 'Fraunces'; src: url("../ASSETS/FONTS/Fraunces.woff2") format("woff2"); }
 @font-face { font-family: 'details'; src: url("../ASSETS/FONTS/details.woff2") format("woff2"); }
 
+@import "about";
+@import "works";
+@import "index";
+@import "contact";
+
 $details-font : 'details';
 $main-font : 'Fraunces';
-$background : linear-gradient(to bottom, #22232C, #0F0F0F);
-$component-background : rgba(0, 0, 0, 32%);
+$background : linear-gradient(to bottom, #2e2f37, #1d1d1d);
+$component-background : rgba(0, 0, 0, 0.201);
 $details-color: #56FF90;
 $rectangle-background: linear-gradient(to right, rgba(189, 243, 255, 13%), transparent);
 $title-size: 13vw;
-$text-size: 1.5vw;
+$text-size: 2vw;
 
 body {
-    height: 100vh;
     width: 100vw;
     background: $background;
     overflow-x: hidden;
-    overflow-y: hidden;
     color : white;
     font-family : $main-font;
-
-    .title {
-        height: 100vh;
+    font-size: $text-size;
+    main {
         display: flex;
-        width: 100%;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family : $main-font;
-        font-size : 13vw;
-        line-height: 0.90;
-        .cursive {
-            font-family : $details-font;
-            color: $details-color;
-            font-size: $title-size;
-        } #G { margin-right: 1.3vw; }
-    }
-
-    nav {
-        width: 27%;
-        height: 70px;
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        display: flex;
-        .right-edge { border-right: 1px solid white; }
-        .link {
+        justify-items:center;
+        align-items:center;
+        .title {
+            position: sticky;
+            height: 100vh;
+            display: flex;
             width: 100%;
-            height: 70%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family : $main-font;
+            font-size : $title-size;
+            line-height: 0.90;
+            .cursive {
+                font-family : $details-font;
+                color: $details-color;
+                font-size: $title-size;
+            } #G { margin-right: 1.3vw; }
+        }
+    
+        nav {
+            width: 27%;
+            height: 70px;
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            display: flex;
+            .right-edge { border-right: 1px solid white; }
+            .link {
+                width: 100%;
+                height: 70%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                a {
+                    z-index: 3;
+                    font-size : 2vw;
+                    text-decoration: none;
+                    color: white;
+                    transition: all 0.1s;
+                    &:hover { color: $details-color; }
+                }
+            }
+        }
+    
+        .page-index {
+            position: fixed;
+            top: 32%;
+            height: 40vh;
+            align-items: center;
+            left: 35px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            .losange--wrapper {
+                height: 100%;
+                .losange {
+                    background: transparent;
+                    border: 2px solid white;
+                    height: 4vh;
+                    width: 4vh;
+                    transform: rotate(45deg);
+                }
+                #index-losange {
+                    background: $details-color;
+                    border: none;
+                    transform: scale(0.7);
+                }
+            }
+        }
+
+        .scroll-arrow--wrapper {
+            position: absolute;
+            height: 100px;
+            transform: rotate(270deg);
+            width: 40vh;
+            text-align: center;
+            border: 1px solid white;
+            right: -90px;
+            top: 44%;
+        }
+
+        .box {
+            background: $component-background;
+            border-radius: 20px;
+            width: 80vw;
+            height: auto;
+            padding: 80px;
+            margin-bottom: 100px;
+        }
+    
+        .centered-losange--wrapper {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size : 2vw;
-            text-decoration: none;
-            color: white;
-            a {
-                text-decoration: none;
-                color: white;
-                transition: all 0.1s;
-                &:hover { color: $details-color; }
+            .centered-losange {
+                height: 30vw;
+                width: 30vw;
+                position: absolute;
+                background: $rectangle-background;
+                transform: rotate(45deg);
             }
         }
-    }
-
-    .centered-losange--wrapper {
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .centered-losange {
-            height: 30vw;
-            width: 30vw;
-            position: absolute;
-            background: $rectangle-background;
-            transform: rotate(45deg);
-        }
-    }
-
-    .corners {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        & > * {
-            position: relative;
-            background-color:white;
-        }
-        .horizontal-bar {
-            height: 1px;
-            width: 30vw;
-            top: 29px;
-            left: 47px;
-        }
-        .mini-horizontal-bar {
-            height: 1px;
-            width: 10vw;
-            top: 10px;
-            left: 40px;
-        }
-        .vertical-bar {
-            height: 7.5vh;
-            width: 1px;
-            top: 19px;
-            left: 29px;
-        }
+    
         .losange {
-            background-color: transparent;
+            background: transparent;
             border: 2px solid white;
             height: 25px;
             width: 25px;
-            top: 15px;
             transform: rotate(45deg);
-            left: 15px;
         }
-    }
-    .bottom-right {
-        transform: rotate(180deg);
-        bottom: 0;
-        right: 0;
+    
+        .corners {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            & > * {
+                position: relative;
+                background-color:white;
+            }
+            .horizontal-bar {
+                height: 1px;
+                width: 30vw;
+                top: 29px;
+                left: 47px;
+            } .mini-horizontal-bar {
+                height: 1px;
+                width: 10vw;
+                top: 10px;
+                left: 40px;
+            } .vertical-bar {
+                height: 7.5vh;
+                width: 1px;
+                top: 19px;
+                left: 29px;
+            } .losange {
+                height: 25px;
+                width: 25px;
+                top: 15px;
+                left: 15px;
+                background: transparent;
+            }
+        } .bottom-right {
+            transform: rotate(180deg);
+            bottom: 0;
+            right: 0;
+        }
     }
 }
