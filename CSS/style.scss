@@ -1,13 +1,5 @@
-@font-face {
-    font-family: 'Fraunces';
-    src: url("../ASSETS/FONTS/Fraunces.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: 'details';
-    src: url("../ASSETS/FONTS/details.woff2") format("woff2");
-}
-
+@font-face { font-family: 'Fraunces'; src: url("../ASSETS/FONTS/Fraunces.woff2") format("woff2"); }
+@font-face { font-family: 'details'; src: url("../ASSETS/FONTS/details.woff2") format("woff2"); }
 
 $details-font : 'details';
 $main-font : 'Fraunces';
@@ -24,74 +16,65 @@ body {
     background: $background;
     overflow-x: hidden;
     overflow-y: hidden;
-    main {
-        color : white;
-        font-family : $main-font;
+    color : white;
+    font-family : $main-font;
 
-        .title {
-            height: 100vh;
-            display: flex;
+    .title {
+        height: 100vh;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family : $main-font;
+        font-size : 13vw;
+        line-height: 0.90;
+        .cursive {
+            font-family : $details-font;
+            color: $details-color;
+            font-size: $title-size;
+        } #G { margin-right: 1.3vw; }
+    }
+
+    nav {
+        width: 27%;
+        height: 70px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: flex;
+        .right-edge { border-right: 1px solid white; }
+        .link {
             width: 100%;
-            flex-direction: column;
+            height: 70%;
+            display: flex;
             justify-content: center;
             align-items: center;
-            font-family : $main-font;
-            font-size : 13vw;
-            line-height: 0.90;
-            .cursive {
-                font-family : $details-font;
-                color: $details-color;
-                font-size: $title-size;
-            } #G {
-                margin-right: 1.3vw;
-            }
-        }
-
-
-
-        nav {
-            width: 27%;
-            height: 70px;
-            position: absolute;
-            right: 10px;
-            top: 10px;
-            display: flex;
-            .right-edge { border-right: 1px solid white; }
-            .link {
-                width: 100%;
-                height: 70%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size : 2vw;
+            font-size : 2vw;
+            text-decoration: none;
+            color: white;
+            a {
                 text-decoration: none;
                 color: white;
-                a {
-                    text-decoration: none;
-                    color: white;
-                    transition: 0.5s;
-                    &:hover { color: $details-color; }
-                }
+                transition: 0.5s;
+                &:hover { color: $details-color; }
             }
         }
+    }
 
-
-
-        .centered-losange--wrapper {
+    .centered-losange--wrapper {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .centered-losange {
+            height: 350px;
+            width: 350px;
             position: absolute;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .centered-losange {
-                height: 350px;
-                width: 350px;
-                position: absolute;
-                background: $rectangle-background;
-                transform: rotate(45deg);
-                
-            }
+            background: $rectangle-background;
+            transform: rotate(45deg);
         }
-    }|
+    }
 }

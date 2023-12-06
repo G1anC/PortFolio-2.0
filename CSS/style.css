@@ -12,12 +12,10 @@ body {
   background: linear-gradient(to bottom, #22232C, #0F0F0F);
   overflow-x: hidden;
   overflow-y: hidden;
-}
-body main {
   color: white;
   font-family: "Fraunces";
 }
-body main .title {
+body .title {
   height: 100vh;
   display: flex;
   width: 100%;
@@ -28,15 +26,15 @@ body main .title {
   font-size: 13vw;
   line-height: 0.9;
 }
-body main .title .cursive {
+body .title .cursive {
   font-family: "details";
   color: #56FF90;
   font-size: 13vw;
 }
-body main .title #G {
+body .title #G {
   margin-right: 1.3vw;
 }
-body main nav {
+body nav {
   width: 27%;
   height: 70px;
   position: absolute;
@@ -44,10 +42,10 @@ body main nav {
   top: 10px;
   display: flex;
 }
-body main nav .right-edge {
+body nav .right-edge {
   border-right: 1px solid white;
 }
-body main nav .link {
+body nav .link {
   width: 100%;
   height: 70%;
   display: flex;
@@ -57,15 +55,15 @@ body main nav .link {
   text-decoration: none;
   color: white;
 }
-body main nav .link a {
+body nav .link a {
   text-decoration: none;
   color: white;
   transition: 0.5s;
 }
-body main nav .link a:hover {
+body nav .link a:hover {
   color: #56FF90;
 }
-body main .centered-losange--wrapper {
+body .centered-losange--wrapper {
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -73,7 +71,7 @@ body main .centered-losange--wrapper {
   justify-content: center;
   align-items: center;
 }
-body main .centered-losange--wrapper .centered-losange {
+body .centered-losange--wrapper .centered-losange {
   height: 350px;
   width: 350px;
   position: absolute;
