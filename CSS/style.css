@@ -6,9 +6,21 @@
   font-family: "details";
   src: url("../ASSETS/FONTS/details.woff2") format("woff2");
 }
+#works-body #works-bottom-right {
+  position: relative;
+  margin-left: 67%;
+}
+
 #index-body {
   overflow-y: hidden;
   height: 100vh;
+}
+
+#contact-body {
+  overflow: hidden;
+}
+#contact-body #contact-main #N {
+  margin-right: 1.9vw;
 }
 
 body {
@@ -29,6 +41,7 @@ body main .title {
   position: sticky;
   height: 100vh;
   display: flex;
+  z-index: 2;
   width: 100%;
   flex-direction: column;
   justify-content: center;
@@ -46,31 +59,45 @@ body main .title #G {
   margin-right: 1.3vw;
 }
 body main nav {
-  width: 27%;
-  height: 70px;
   position: fixed;
-  right: 20px;
-  top: 20px;
+  z-index: 3;
+  width: 100vw;
+  height: 70px;
+  top: 0;
+  left: 0;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
   display: flex;
+  align-items: center;
+  justify-content: right;
 }
-body main nav .right-edge {
+body main nav .nav-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 27%;
+  right: 20px;
+  height: 60px;
+}
+body main nav .nav-section .right-edge {
   border-right: 1px solid white;
 }
-body main nav .link {
+body main nav .nav-section .link {
   width: 100%;
   height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body main nav .link a {
-  z-index: 3;
+body main nav .nav-section .link a {
+  z-index: 4;
   font-size: 2vw;
   text-decoration: none;
   color: white;
   transition: all 0.1s;
 }
-body main nav .link a:hover {
+body main nav .nav-section .link a:hover {
   color: #56FF90;
 }
 body main .page-index {
@@ -78,7 +105,7 @@ body main .page-index {
   top: 32%;
   height: 40vh;
   align-items: center;
-  left: 35px;
+  left: 1vw;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -103,10 +130,19 @@ body main .scroll-arrow--wrapper {
   height: 100px;
   transform: rotate(270deg);
   width: 40vh;
+  font-size: 2vw;
   text-align: center;
-  border: 1px solid white;
-  right: -90px;
+  right: -8vw;
   top: 44%;
+  margin-bottom: 10px;
+}
+body main .scroll-arrow--wrapper .scroll {
+  margin-bottom: 0.47vw;
+}
+body main .scroll-arrow--wrapper .bar {
+  width: 100%;
+  height: 1px;
+  background: white;
 }
 body main .box {
   background: rgba(0, 0, 0, 0.201);
@@ -121,6 +157,7 @@ body main .centered-losange--wrapper {
   width: 100vw;
   height: 100vh;
   display: flex;
+  z-index: 1;
   justify-content: center;
   align-items: center;
 }
@@ -141,6 +178,7 @@ body main .losange {
 body main .corners {
   position: absolute;
   top: 0px;
+  z-index: 3;
   left: 0px;
 }
 body main .corners > * {
@@ -175,5 +213,6 @@ body main .corners .losange {
 body main .bottom-right {
   transform: rotate(180deg);
   bottom: 0;
+  top: 100%;
   right: 0;
 }/*# sourceMappingURL=style.css.map */
