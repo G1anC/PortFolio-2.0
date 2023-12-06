@@ -89,24 +89,28 @@ body {
         .horizontal-bar {
             height: 1px;
             width: 350px;
-            top: 37px;
-            left: 57px;
+            top: 28px;
+            left: 45px;
         }
         .vertical-bar {
             height: 100px;
             width: 1px;
-            top: 26px;
-            left: 35px;
+            top: 20px;
+            left: 28px;
         }
         .losange {
             background-color: transparent;
             border: 1px solid white;
-            height: 30px;
-            width: 30px;
-            top: 20px;
+            height: 25px;
+            width: 25px;
+            top: 15px;
             transform: rotate(45deg);
-            left: 20px;
+            left: 15px;
         }
     }
-
+    .bottom-right {
+        transform: rotate(180deg);
+        bottom: 0;
+        right: 0;
+    }
 }
