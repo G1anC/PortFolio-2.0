@@ -14,6 +14,7 @@ $details-color: #56FF90;
 $rectangle-background: linear-gradient(to right, rgba(189, 243, 255, 13%), transparent);
 $title-size: 13vw;
 $text-size: 2vw;
+$box-title-size: 6vw;
 
 body {
     width: 100vw;
@@ -45,11 +46,11 @@ body {
             display: flex;
             z-index: 2;
             width: 100%;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             font-family : $main-font;
             font-size : $title-size;
+            flex-direction: column;
             line-height: 0.90;
             .cursive {
                 font-family : $details-font;
@@ -147,6 +148,30 @@ body {
             height: auto;
             padding: 80px;
             margin-bottom: 100px;
+            .box-title {
+                position: sticky;
+                width: 100%;
+                line-height: 0.90;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: $main-font;
+                color: white;
+                background: transparent;
+                border: none;
+                flex-direction: column;
+                font-size: $box-title-size;
+                .cursive {
+                    font-family : $details-font;
+                    color: $details-color;
+                    font-size: $box-title-size;
+                } #shell-cursive { font-size: 7vw; }
+                .less {
+                    display: none;
+                    opacity: 0.3;
+                }
+            }
         }
     
         .centered-losange--wrapper {
