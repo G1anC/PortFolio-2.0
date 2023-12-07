@@ -11,6 +11,7 @@ $main-font : 'Fraunces';
 $background : linear-gradient(to bottom, #2e2f37, #1d1d1d);
 $component-background : rgba(0, 0, 0, 0.201);
 $details-color: #56FF90;
+$paragraph-color: #bfcdc4;
 $rectangle-background: linear-gradient(to right, rgba(189, 243, 255, 13%), transparent);
 $title-size: 13vw;
 $text-size: 2vw;
@@ -18,11 +19,13 @@ $box-title-size: 6vw;
 
 body {
     width: 100vw;
+    height: 100vh;
     background: $background;
     overflow-x: hidden;
     color : white;
     font-family : $main-font;
     font-size: $text-size;
+    letter-spacing: 1px;
     main {
         display: flex;
         flex-direction: column;
@@ -39,6 +42,10 @@ body {
         //         background-image: url("../ASSETS/IMAGES/logo.png");
         //     }
         // }
+
+        #to-enter {
+
+        }
 
         .title {
             position: sticky;
@@ -66,7 +73,7 @@ body {
             height: 70px;
             top: 0;
             left: 0;
-            backdrop-filter: blur(8px);
+            // backdrop-filter: blur(8px);
             display:flex;
             align-items: center;
             justify-content: right;
@@ -171,6 +178,12 @@ body {
                     display: none;
                     opacity: 0.3;
                 }
+            }
+            .paragraph {
+                margin-top: 20px;
+                padding: 50px;
+                color: $paragraph-color;
+                letter-spacing: 1px;
             }
         }
     
